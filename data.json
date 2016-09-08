@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Anoop",
+		"inoffice": false
+	},
+	{
+		"name": "Anup",
+		"inoffice": false
+	},
+	{
+		"name": "Vipin",
+		"inoffice": true
+	},
+	{
+		"name": "Nikhil",
+		"inoffice": true
+	},
+	{
+		"name": "Shabu",
+		"inoffice": false
+	},
+	{
+		"name": "Prasanth",
+		"inoffice": true
+	},
+	{
+		"name": "Ghalib",
+		"inoffice": false
+	},
+	{
+		"name": "Chandran",
+		"inoffice": true
+	},
+	{
+		"name": "Rejesh",
+		"inoffice": true
+	}
+]
