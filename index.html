@@ -4,35 +4,15 @@
         <meta charset="utf-8">
         <title>My App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
 <body>
-	<h1> Ajax sample </h1>
+	<h1> Ajax sample - Load employee data </h1>
 	<hr/>
-	<button id="bring_button" onclick="sendAjax()">Bring</button>
-	<div id="ajax_div">
-		
+
+	<button onclick="getEmployeeData()">Get it >></button>
+	<div id="employee">	
 	</div>
-	<script>
-
-		// 1. Create XHR Object
-		var xhr = new XMLHttpRequest();
-
-		// 2. Callback Function to process the server response
-		xhr.onreadystatechange = function() {
-			if (xhr.readyState === 4) {
-				document.getElementById('ajax_div').innerHTML = xhr.responseText;
-			}
-		}
-
-		// 3. Make Request
-		xhr.open('GET', 'ajax.html');
-		
-		// 4. Send Request
-		function sendAjax() {
-			console.log('clicked');
-			xhr.send();
-		}
-
-	</script>
+	<script src="app.js"></script>
 </body>
 </html>
