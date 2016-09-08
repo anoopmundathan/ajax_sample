@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <title>My App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+	<h1> Ajax sample </h1>
+	<hr/>
+	<button id="bring_button" onclick="sendAjax()">Bring</button>
+	<div id="ajax_div">
+		
+	</div>
+	<script>
+
+		// 1. Create XHR Object
+		var xhr = new XMLHttpRequest();
+
+		// 2. Callback Function to process the server response
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				document.getElementById('ajax_div').innerHTML = xhr.responseText;
+			}
+		}
+
+		// 3. Make Request
+		xhr.open('GET', 'ajax.html');
+		
+		// 4. Send Request
+		function sendAjax() {
+			console.log('clicked');
+			xhr.send();
+		}
+
+	</script>
+</body>
+</html>
