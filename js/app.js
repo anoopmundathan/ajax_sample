@@ -7,7 +7,7 @@ xhr.onreadystatechange = function() {
 
 		// Process response and create HTML out for JSON data
 		var responseText = JSON.parse(xhr.responseText);
-		var htmlList = "<ul>";
+		var htmlList = "<ul class='employee'>";
 
 		for(var i = 0; i < responseText.length; i++) {
 			console.log(responseText[i]);
@@ -25,7 +25,7 @@ xhr.onreadystatechange = function() {
 }
 
 //3. Open the request
-xhr.open('GET', 'data.json');
+xhr.open('GET', './data/data.json');
 
 //4. Send request
 function getEmployeeData() {
