@@ -6,31 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body>
-	<h1> Ajax sample </h1>
+	<h1> Ajax sample - jQuery Load method </h1>
 	<hr/>
 	<button id="bring_button" onclick="sendAjax()">Bring</button>
 	<div id="ajax_div">
-		
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script>
-
-		// 1. Create XHR Object
-		var xhr = new XMLHttpRequest();
-
-		// 2. Callback Function to process the server response
-		xhr.onreadystatechange = function() {
-			if (xhr.readyState === 4) {
-				document.getElementById('ajax_div').innerHTML = xhr.responseText;
-			}
-		}
-
-		// 3. Make Request
-		xhr.open('GET', 'ajax.html');
-		
-		// 4. Send Request
+		// jQuery load method
 		function sendAjax() {
-			console.log('clicked');
-			xhr.send();
+			console.log('inside');
+			$('#ajax_div').load('ajax.html');
 		}
 
 	</script>
